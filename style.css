@@ -34,7 +34,7 @@ p{
 
 /*###### Grid #######*/
 
-body{
+.grid{
   display: grid;
   grid-template-columns: 4fr 2fr;
   gap: 1rem;
@@ -63,6 +63,10 @@ aside table th{
   vertical-align: top;
 }
 
+aside th, aside td{
+  padding: 0.1rem 0.5rem;
+}
+
 /*###### Contents #######*/
 
 #contents {
@@ -77,10 +81,19 @@ aside table th{
   padding-left: 2rem;
 }
 
+/*###### Main #######*/
+
+main{
+  margin-inline: 1rem;
+  padding-bottom: 2rem;
+}
+
 /*###### Figures #######*/
 
 .right{
   float: right;
+  position: relative;
+  top: -3rem;
 }
 
 .left{
@@ -92,4 +105,65 @@ figure.wrapper{
   margin: 1.5rem;
   display: flex;
   flex-direction: column;
+}
+
+/*###### Kits Section #######*/
+
+#kits{
+  margin-top: 9rem;
+}
+
+#kits table{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border:rgba(22, 96, 186, 0.704) solid;
+  text-align: center;
+}
+
+#kits table tr, #kits table td, #kits table th{
+  border:rgba(22, 96, 186, 0.704) solid 1px;
+}
+
+#kits thead th:nth-child(1){
+  width: 15%;
+}
+
+#kits thead th:nth-child(2){
+  width: 25%;
+}
+
+#kits thead th:nth-child(3){
+  width: 20%;
+}
+
+#kits thead th:nth-child(4){
+  width: 40%;
+}
+
+#kits th, td{
+  padding: 1rem;
+}
+
+#kits table thead{
+  background-color: cornflowerblue;
+}
+
+#kits table caption{
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/*###### References Section #######*/
+
+#references ol{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  list-style-position: inside;
+  padding-inline-start: 0;
+}
+
+#references ol li{
+  font-size: 1rem;
 }
